@@ -1039,6 +1039,8 @@ steelseries_write_resolutions_v4(struct ratbag_profile *profile)
 			&buf[index * 2 + 4],
 			resolution->dpi_x / dpirange->step
 		);
+
+		index++;
 	}
 
 	return ratbag_hidraw_output_report(profile->device, buf, sizeof(buf));
